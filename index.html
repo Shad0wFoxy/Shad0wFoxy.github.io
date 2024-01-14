@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Payment</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <button id="checkout">Checkout</button>
+
+    <script>
+        var stripe = Stripe(
+            "pk_live_51OYTinEHtmJNWuGhneuPjIVkG5pRaRFnhkylPAB0py5TSFNDKzGaKEYMUhgP50VlOSIUG9wEuOcElJRzCpp8WDtM00rsqBrK5Y"
+        );
+
+        document.getElementById("checkout").addEventListener("click", function() {
+            stripe.redirectToCheckout({
+                lineItems: [
+                    {
+                        price: "price_1OYUDeEHtmJNWuGhfnsvajb4",
+                        quantity: 1,
+                    },
+                ],
+                mode: "payment",
+                successUrl: "https://strefawiary.pl",
+                cancelUrl: "https://www.youtube.com"
+            }).then(function(result){
+                alert(result);
+            });
+        });
+    </script>
+</body>
+</html>
