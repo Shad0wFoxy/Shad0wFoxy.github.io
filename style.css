@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: var(--deep-anthracite);
+}
+body {
+    background-color: var(--warm-pergamin);
+}
+
+#title {
+    color: var(--deep-matcha-green);
+    font-size: 4rem;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--deep-matcha-green);
+    border-bottom: 2px solid var(--warm-amber-dark);
+}
+
+#navbar a {
+    font-size: 1.2rem;
+    padding: 6px 20px;
+    color: var(--creamy-silk);
+    font-weight: 500;
+    transition: all .15s ease-in-out;
+    text-decoration: none;
+    /*border-left: 1.5px solid var(--warm-amber);*/ /* Consider! */
+}
+
+#navbar a:hover {
+    color: var(--warm-amber);
+    cursor: pointer;
+}
+
+/* Does not work?!?!!? */
+/*#navbar a:last-child {
+    border: none;
+}*/
+
+#main-content {
+    height: 100%;
+    width: 60%;
+    background-color: var(--creamy-silk);
+    border: 1px solid var(--sage-green);
+}
+
+#main-content {
+    padding: 40px;
+    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "top-left    right"
+        "bottom-left right"
+        "footer     footer";
+    column-gap: 80px;
+    row-gap: 16px;
+}
+
+#sec-introduction {
+    grid-area: top-left
+}
+
+#camellia-img {
+    grid-area: right;
+}
+
+#sec-camellia {
+    grid-area: bottom-left;
+}
+
+#sec-infusions {
+    grid-area: footer;
+}
+
+img {
+    width: 400px;
+    border: 2px solid var(--warm-amber-dark);
+    padding: 10px;
+    background-color: var(--deep-anthracite);
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 20px;
+    margin-top: -20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}

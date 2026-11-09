@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="../../globals.css" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+
+        <title>Herbality</title>
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="title">Herbality</h1>
+            <nav id="navbar">
+                <a href="../../index.html">Home</a>
+                <a href="../history/index.html">Historia Herbaty</a>
+                <a href="../types/index.html">Rodzaje Herbat</a>
+                <a href="../gallery/index.html">Galeria</a>
+                <a href="index.html">Kontakt</a>
+            </nav>
+            <article id="main-content" class="contact-wrapper">
+              <header class="contact-header">
+                <h2>Kontakt</h2>
+                <p class="contact-lead">
+                  Masz pytania? Chcesz bardziej zagłębić się w świat herbat lub potrzebujesz porady przy wyborze naparu?
+                </p>
+                <p class="contact-sublead">Napisz do nas śmiało!</p>
+              </header>
+
+              <div class="contact-layout">
+                <aside class="contact-info">
+                  <div class="info-card">
+                    <h3>Herbality Studio</h3>
+                    <p>Chętnie dzielimy się wiedzą o ceremoniach, parzeniu liści i pochodzeniu poszczególnych odmian.</p>
+
+                    <ul class="info-list">
+                      <li><strong>E-mail:</strong> kontakt@herbality.pl</li>
+                      <li><strong>Lokalizacja:</strong> Kraków, Polska</li>
+                      <li><strong>Czas odpowiedzi:</strong> do 24 godzin</li>
+                    </ul>
+                  </div>
+                </aside>
+
+                <section class="contact-form-section">
+                  <form class="tea-form" action="javascript:validate(this)" method="post">
+                    <div class="form-group">
+                      <label for="user-email">Twój adres e-mail</label>
+                      <input
+                        type="email"
+                        id="user-email"
+                        name="email"
+                        placeholder="np. jan.kowalski@example.pl"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="topic-select">Temat wiadomości</label>
+                      <select id="topic-select" name="topic" required>
+                        <option value="" disabled selected>-- Wybierz temat wiadomości --</option>
+                        <option value="porada">Porada w wyborze herbaty</option>
+                        <option value="informacje">Więcej informacji o herbatach</option>
+                        <option value="inne">Inne</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="message-content">Treść wiadomości</label>
+                      <textarea
+                        id="message-content"
+                        name="message"
+                        rows="5"
+                        placeholder="Napisz, jak możemy Ci pomóc..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                  </form>
+                </section>
+              </div>
+            </article>
+            <footer>Tymon Błachut &nbsp; &copy; 2026</footer>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

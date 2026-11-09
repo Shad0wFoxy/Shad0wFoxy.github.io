@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: var(--deep-anthracite);
+}
+body {
+    background-color: var(--warm-pergamin);
+}
+
+#title {
+    color: var(--deep-matcha-green);
+    font-size: 4rem;
+}
+
+#container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--deep-matcha-green);
+    border-bottom: 2px solid var(--warm-amber-dark);
+}
+
+#navbar a {
+    font-size: 1.2rem;
+    padding: 6px 20px;
+    color: var(--creamy-silk);
+    font-weight: 500;
+    transition: all .15s ease-in-out;
+    text-decoration: none;
+    /*border-left: 1.5px solid var(--warm-amber);*/ /* Consider! */
+}
+
+#navbar a:hover {
+    color: var(--warm-amber);
+    cursor: pointer;
+}
+
+/* Does not work?!?!!? */
+/*#navbar a:last-child {
+    border: none;
+}*/
+
+#main-content {
+    height: 100%;
+    width: 60%;
+    background-color: var(--creamy-silk);
+    border: 1px solid var(--sage-green);
+}
+
+.gallery-wrapper {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: #faf8f5;
+  border: 1px solid #dcd7ce;
+  box-sizing: border-box;
+}
+
+.gallery-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-intro h2 {
+  font-family: Georgia, serif;
+  color: #244228;
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.gallery-intro p {
+  color: #4a4540;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.gallery-video-section {
+  margin-bottom: 3rem;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #7c533e;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.video-caption {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.tea-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tea-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 2px solid #7c533e;
+  background-color: #333333;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.tea-card:hover .image-frame img {
+  transform: scale(1.04);
+}
+
+.tea-card figcaption {
+  margin-top: 0.75rem;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #2c2825;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .tea-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .gallery-wrapper {
+    padding: 1.25rem;
+  }
+
+  .tea-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+    padding: 20px;
+    margin-top: -20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
