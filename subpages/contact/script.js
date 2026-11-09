@@ -3,7 +3,10 @@ function validate(event) {
   if (!email.includes("@") || email.split("@").length != 2) {
     alert("Wpisano niepoprawny adres E-mail!")
     event.preventDefault();
+    return;
   }
+
+  sendEmail();
 }
 
 function sendEmail() {
