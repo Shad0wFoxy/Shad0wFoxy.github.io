@@ -5,3 +5,10 @@ function validate(event) {
     event.preventDefault();
   }
 }
+
+function sendEmail() {
+  var topic = document.getElementById("topic-select").value;
+  var message = document.getElemenyById("message-content").value;
+
+  window.open(`mailto:t.blachut06@gmail.com?subject=${topic}&body=${message}`);
+}
